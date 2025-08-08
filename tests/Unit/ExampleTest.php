@@ -13,6 +13,13 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/hello');
         $response->assertStatus(200);
-        $response->assertSee('Hello, Testing!');
+        $response->assertSee('Hello, World!');
+    }
+
+    public function test_home_route_is_accessible(): void 
+    {
+        $response = $this->get('/');
+        $response->assertStatus(200);
+        $response->assertSee('Welcome to Laravel Workflow XX');
     }
 }
