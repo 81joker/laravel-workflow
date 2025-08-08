@@ -20,6 +20,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/');
         $response->assertStatus(200);
-        $response->assertSee('Welcome to Laravel Workflow');
+        $response->assertSee('Let\'s get started');
     }
 }
