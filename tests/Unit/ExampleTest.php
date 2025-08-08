@@ -2,15 +2,17 @@
 
 namespace Tests\Unit;
 
-use PHPUnit\Framework\TestCase;
+use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
     /**
      * A basic test example.
      */
-    public function test_that_true_is_true(): void
+    public function test_hello_route_is_accessible(): void
     {
-        $this->assertTrue(true);
+        $response = $this->get('/hello');
+        $response->assertStatus(200);
+        $response->assertSee('Hello, World!');
     }
 }
