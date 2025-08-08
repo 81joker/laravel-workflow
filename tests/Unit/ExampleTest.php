@@ -13,6 +13,6 @@ class ExampleTest extends TestCase
     {
         $response = $this->get('/hello');
         $response->assertStatus(200);
-        $response->assertSee('Hello, World!');
+        $response->assertSee('Hello, Testing!');
     }
 }
